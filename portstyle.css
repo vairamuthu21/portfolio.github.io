@@ -311,7 +311,13 @@ span {
 }
 
 .about-img img {
-    width: 90%;
+    /* width: 90%;
+    border-radius: 50%;
+    border: 0.2rem solid var(--main-color); */
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* important */
     border-radius: 50%;
     border: 0.2rem solid var(--main-color);
 }
@@ -321,9 +327,10 @@ span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
+    width: 105%;
+    height: 105%;
     border-radius: 50%;
+
     border-top: 0.2rem solid var(--second-bg-color);
     border-bottom: 0.2rem solid var(--second-bg-color);
     border-left: 0.2rem solid var(--main-color);
@@ -548,11 +555,14 @@ span {
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-    width: 95%;
+    width: 80%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
     width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
+    width: 75%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
@@ -585,6 +595,8 @@ span {
     justify-content: space-between;
     padding-top: 70px;
     flex-wrap: wrap;
+
+    
 }
 
 #product1 .pro {
@@ -598,15 +610,19 @@ span {
     margin: 15px 0;
     transition: 0.2s ease;
     position: relative;
+
+   
 }
 
 #product1 .pro:hover {
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    
+    transform: translateY(-10px);
 }
 
 #product1 .pro img {
+    
     width: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 #product1 .pro-container .pro .des {
@@ -627,23 +643,24 @@ span {
 
 
 #product1 .pro .cart {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background: transparent;
-    font-weight: 500;
+    
+
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 22px;
     color: #00abf0;
     border: 1px solid #00abf0;
-    position: absolute;
-    bottom: 20px;
-    right: 10px;
+    padding: 8px;
+    border-radius: 50%;
 }
 
 
 .contact {
     min-height: 100vh;
     padding: 60px 20px;
+    justify-content: center;
+    
 
 
 }
@@ -663,7 +680,7 @@ span {
 .contact form .input-box {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
